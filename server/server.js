@@ -8,9 +8,12 @@ const Feedback = require('./models/Feedback');
 
 dotenv.config();
 const app = express();
-
+const allowedOrigins = [
+  'http://localhost:5173',
+  'https://organic-products-client.onrender.com'
+];
 app.use(cors({
-    origin: 'http://localhost:5173', // or your deployed frontend
+    origin: allowedOrigins, // or your deployed frontend
     credentials: true
 }));
 app.use(express.json());
