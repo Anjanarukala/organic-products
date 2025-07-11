@@ -16,7 +16,7 @@ function Home() {
       className="position-relative"
       style={{
         minHeight: '100vh',
-        backgroundImage: 'url("https://images.unsplash.com/photo-1539902743451-20dfa0a92ffd?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")',
+        backgroundImage: 'url("https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=1548&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")',
         backgroundAttachment: 'fixed', // 📌 Fixed background (doesn't scroll)
         backgroundSize: 'cover',
         backgroundPosition: 'center',
@@ -25,8 +25,7 @@ function Home() {
       {/* Slightly more transparent overlay */}
       <div 
         className="position-absolute top-0 start-0 w-100 h-100" 
-        style={{ 
-          backgroundColor: 'rgba(255, 255, 255, 0.6)',  // Changed from 0.85 ➡️ 0.6
+        style={{
           backdropFilter: 'blur(3px)',
           zIndex: 1 
         }} 
@@ -57,6 +56,7 @@ function Home() {
                 style={{ 
                   backgroundColor: 'rgba(255,255,255,0.8)', 
                   backdropFilter: 'blur(4px)' 
+                  
                 }}
               >
                 <img 
