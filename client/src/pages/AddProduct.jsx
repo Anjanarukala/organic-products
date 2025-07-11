@@ -15,7 +15,7 @@ function AddProduct() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/products', form);
+      await axios.post('https://organic-products.onrender.com/products', form);
       alert('✅ Product added successfully!');
       navigate('/');
     } catch (err) {
@@ -50,7 +50,7 @@ function AddProduct() {
             <input className="form-control" type="text" placeholder="e.g., FSSAI, USDA Organic" value={form.certification} onChange={e => setForm({ ...form, certification: e.target.value })} />
           </div>
           <div className="d-grid">
-            <button className="btn btn-success btn-lg">➕ Add Product</button>
+            <button className="btn btn-success btn-lg">Add Product</button>
           </div>
         </form>
       </div>

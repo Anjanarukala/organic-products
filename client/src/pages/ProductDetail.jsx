@@ -10,11 +10,11 @@ function ProductDetail() {
   const [message, setMessage] = useState('');
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/products/${id}`)
+    axios.get(`https://organic-products.onrender.com/products/${id}`)
       .then(res => setProduct(res.data))
       .catch(err => console.error("Product fetch error:", err));
 
-    axios.get(`http://localhost:5000/feedback/${id}`)
+    axios.get(`https://organic-products.onrender.com/feedback/${id}`)
       .then(res => setFeedbacks(res.data))
       .catch(err => console.error("Feedback fetch error:", err));
   }, [id]);
@@ -22,7 +22,7 @@ function ProductDetail() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/feedback/', { productId: id, name, message });
+      await axios.post('https://organic-products.onrender.com/feedback/', { productId: id, name, message });
       setFeedbacks(prev => [...prev, { name, message }]);
       setName('');
       setMessage('');
